@@ -1,0 +1,147 @@
+/* General Styles */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-right: 1rem;
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #f8f9fa;
+}
+
+.hero-section {
+    min-height: 80vh;
+    background-color: #343a40;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+}
+
+.buttons .btn {
+    margin-right: 1rem;
+}
+
+.about-section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.about-img {
+    text-align: center;
+}
+
+.about-img img {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section {
+    padding: 4rem 0;
+}
+
+.skills-section {
+    padding: 4rem 0;
+}
+
+.projects-section {
+    padding: 4rem 0;
+}
+
+.project-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.contact-section {
+    padding: 4rem 0;
+    color: #ffffff;
+}
+
+.contact-section h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 2rem 0;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.social-icons a:hover {
+    color: #f8f9fa;
+}
+
+/* Typed Text Animation Styles */
+
+.typed-cursor {
+    opacity: 1;
+    font-size: 1.2em;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+   

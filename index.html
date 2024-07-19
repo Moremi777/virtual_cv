@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olebogeng Moremi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-3Lj44Es4Vb0gW7Jlv/yFrEiP+LPebvi7P3KFOi5cR2YYF9mETI8Hv05ZD6nQcoWAp93OYl7K27PdSu3TFUJZ9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .intro-section, .about-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            height: auto;
+            flex-direction: column;
+        }
+
+        .intro-text, .about-text {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        .intro-text h2, .intro-text h3, .about-text h3, .about-text p {
+            font-size: 1.5rem;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons .btn {
+            margin-right: 10px;
+        }
+
+        .container-fluid .row img{
+            width: 100%;
+            max-width: 300px;
+            border-radius: 50%;
+            height: auto;
+        }
+
+        .image-section img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 50%;
+            animation: changeImage 5s infinite;
+        }
+
+        @keyframes changeImage {
+            0%, 50%, 100% { content: url('moremi.jpg'); }
+        }
+
+        .typing {
+            border-right: .1em solid orange;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(40, end), blink .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: orange; }
+        }
+
+        @media (min-width: 768px) {
+            .intro-section, .about-section {
+                flex-direction: row;
+            }
+
+            .intro-text, .about-text {
+                text-align: left;
+            }
+
+            .intro-section {
+                flex-direction: row-reverse; /* Image on the right for larger screens */
+            }
+
+            .about-section .row {
+                flex-direction: row; /* Image on the left for larger screens */
+            }
+
+            .about-section .col-md-4 {
+                text-align: center; /* Center align image column on larger screens */
+            }
+
+            .image-section img {
+                max-width: 50%;
+                width: auto; /* Ensure image does not stretch on larger screens */
+                margin-top: -100px;
+            }
+            
+            .container-fluid .row img {
+                max-width: 100%;
+                height: auto;/* Ensure image does not stretch on larger screens */
+            }
+        }
+
+        .navbar-brand {
+            font-size: 28px;
+            font-weight: bolder;
+            margin-left: 80px;
+        }
+
+        .navbar-brand, a:hover {
+            text-decoration: none;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .nav-item {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            color: white;
+            font-size: 18px;
+            font-family: monospace;
+            margin-left: 10px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: orangered;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: orangered;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        h3, h5 {
+            color: orangered;
+            font-family: monospace;
+        }
+
+        .home h1{
+            color: white;
+            margin-left: 50px;
+            margin-top: 80px;
+        }
+
+        .buttons .btn-resume{
+            border: 1px;
+            color: black;
+            background-color: orangered;
+            border-color: white;
+            border-radius: 35px;
+            padding: 15px;
+            text-decoration: none;
+            font-family: monospace;
+        }
+
+        .buttons .btn-hire{
+            border: 2px #ffffff;
+            color: white;
+            background-color: #121212;
+            border-radius: 35px;
+            padding: 15px;
+            text-decoration: none;
+            font-family: monospace;
+        }
+
+        
+        .about-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .about-img {
+            text-align: center;
+        }
+
+        .about-img img {
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .resume-section {
+            padding: 4rem 0;
+        }
+
+        .skills-section {
+            background-color: white;
+            padding: 4rem 0;
+        }
+
+        .projects-section {
+            background-color: white;
+            padding: 4rem 0;
+        }
+
+        .project-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-section {
+            padding: 4rem 0;
+            background-color: black;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section {
+            background-color: #121212;
+            color: #ffffff;
+            padding: 2rem 0;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .social-icons a:hover {
+            color: #f8f9fa;
+        }
+
+        #resume .row{
+            padding: 40px;
+            margin-left: 50px;
+        }
+
+        #projects .row{
+            padding: 40px;
+            margin-left: 50px;
+        }
+
+        #skills .row{
+            padding: 40px;
+            margin-left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar bg-dark border-bottom border-body navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">MOREMI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>        
+    </nav>
+    <div class="home">
+        <h1> < Home > </h1>
+    </div>
+    <div class="intro-section">
+        <div class="image-section">
+            <img src="moremi.jpg" alt="Olebogeng Moremi">
+        </div>
+        <div class="intro-text">
+            <h2 class="typing"></h2>
+            <div class="buttons">
+                <a href="resume.pdf" class="btn-resume">Resume</a>
+                <a href="mailto:olebogengmoremi84@gmail.com" class="btn-hire">Hire Me</a>
+            </div>
+        </div>
+    </div>
+
+ <!-- About Section -->
+ <section id="about" class="about-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p><strong>Name:</strong> Olebogeng Moremi</p>
+                    <p><strong>Location:</strong> Klerksdorp, South Africa</p>
+                    <p><strong>Field:</strong> Full-Stack Developer</p>
+                    <p><strong>GitHub Projects Worked On:</strong> 10+</p>
+                    <div class="buttons mt-4">
+                        <a href="#" class="btn btn-primary">Download CV</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <img src="sam-williams-EHFXVkVe0gM-unsplash.jpg" alt="Olebogeng Moremi" class="img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resume Section -->
+<section id="resume" class="resume-section bg-black">
+    <div class="container">
+        <h2 class="section-title text-center">Resume</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Education</h3>
+                <ul>
+                    <li>BSc in Information Technology - In Progress</li>
+                    <li>High School Diploma - XYZ School</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3>Work Experience</h3>
+                <ul>
+                    <li>Junior Developer at ABC Company</li>
+                    <li>Intern at XYZ Tech Solutions</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section bg-black">
+    <div class="container">
+        <h2 class="section-title text-center">Skills</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Python, Django Framework</li>
+                    <li>React, Angular</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Communication</li>
+                    <li>Problem-solving</li>
+                    <li>Teamwork</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-black">
+    <div class="container">
+        <h2 class="section-title text-center">Projects</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="project-item">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project-item">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project-item">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 2</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project-item">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section bg-black text-white">
+    <div class="container">
+        <h2 class="section-title text-center">Contact Me</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="#" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Klerksdorp, South Africa</p>
+                    <p><i class="fas fa-envelope"></i> olebogengmoremi84@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +123456789</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-section bg-dark text-white text-center py-3">
+    <div class="container">
+        <div class="social-icons mb-2">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Olebogeng Moremi. All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script>
+        const texts = [
+            "<h5>Hello!</h5><br>I'm <h3>Olebogeng Moremi.</h3><br><h4>A Full-Stack Developer</h4>",
+            "I'm a <h3>Full-Stack Developer</h3> Based in South Africa"
+        ];
+        let count = 0;
+        let index = 0;
+        let currentText = '';
+        let letter = '';
+
+        (function type() {
+            if (count === texts.length) {
+                count = 0;
+            }
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+
+            document.querySelector('.typing').innerHTML = letter;
+            if (letter.length === currentText.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 3000); // wait 3 seconds before typing the next text
+            } else {
+                setTimeout(type, 100); // typing speed
+            }
+        }());
+    </script> 
+</body>
+</html>
