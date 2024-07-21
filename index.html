@@ -39,7 +39,7 @@
         }
 
         .about-text p{
-            font-size: 20px;
+            font-size: 18px;
             padding: 8px;
         }
 
@@ -127,6 +127,11 @@
                 max-width: 100%;
                 height: auto;/* Ensure image does not stretch on larger screens */
             }
+
+            .second {
+                padding-left: 130px; /* Adjust this value to shift the section */
+             }
+
         }
 
         .navbar-brand {
@@ -235,6 +240,17 @@
         .skills-section {
             background-color: white;
             padding: 4rem 0;
+        }
+
+        .skills-section h3{
+            font-size: 22px;
+            color: orangered;
+        }
+
+        .skills-section li{
+            padding: 2px;
+            margin-left: -3px;
+            margin-top: 10px;
         }
 
         .projects-section {
@@ -356,40 +372,69 @@
             padding-left: 1.25rem;
         }
 
-        .progress-bar {
-            width: 0;
-            animation: fillProgress 3s forwards;
+        .skills-section ul {
+        list-style-type: none;
+        padding-left: 0;
         }
-
+        .skills-section li::before {
+        content: "\2192";
+        color: orangered;
+        font-weight: bold;
+        display: inline-block;
+        width: 2em;
+        margin-left: -1em;
+        }
         .progress-bar-html {
-            animation-delay: 0.5s;
+        background-color: #28a745; /* Green */
+        animation: fillBar 2s forwards;
         }
-
         .progress-bar-css {
-            animation-delay: 1s;
+        background-color: #17a2b8; /* Blue */
+        animation: fillBar 2s forwards;
         }
-
         .progress-bar-js {
-            animation-delay: 1.5s;
+        background-color: #ffc107; /* Yellow */
+        animation: fillBar 2s forwards;
         }
-
+        .progress-bar-php {
+        background-color: #ff9800; /* Orange */
+        animation: fillBar 2s forwards;
+        }
         .progress-bar-python {
-            animation-delay: 2s;
+        background-color: #dc3545; /* Red */
+        animation: fillBar 2s forwards;
+        }
+        .progress-bar-cpp {
+        background-color: #007bff; /* Blue */
+        animation: fillBar 2s forwards;
+        }
+        .progress-bar-java {
+        background-color: #795548; /* Brown */
+        animation: fillBar 2s forwards;
+        }
+        .progress-bar-csharp {
+        background-color: #6f42c1; /* Purple */
+        animation: fillBar 2s forwards;
+        }
+        @keyframes fillBar {
+        from {
+            width: 0;
+        }
+        to {
+            width: var(--progress-end);
+        }
         }
 
-        .progress-bar-django {
-            animation-delay: 2.5s;
+        .certifications-images {
+            display: flex;
+            gap: 10px;
         }
-
-        @keyframes fillProgress {
-            from {
-                width: 0;
-            }
-            to {
-                width: var(--progress-end);
-            }
+        .certifications-images img{
+           width: 500px;
         }
-
+        .certifications-images .carousel {
+            flex: 1;
+        }
     </style>
 </head>
 <body>
@@ -409,16 +454,16 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Resume</a>
+                        <a class="nav-link" href="#resume">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Skills</a>
+                        <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Projects</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -494,12 +539,13 @@
                       <div class="timeline-start mb-10 md:text-end">
                         <time class="font-mono italic">2018 - 2021</time>
                         <div class="text-lg font-black"> Milner High School </div>
-                        <p>Graduated with Bachelors Pass, National Senior Certificate.
+                        <p>  Bachelors Pass, National Senior Certificate.
 
                         Subjects did:
                         English HL             Afrikaans FAL
                         Pure Maths             Physics
                         CAT                    Business Studies</p>
+                        <img src="nwu.png" class="d-block w-56" style="position: absolute; margin-top: 100px; margin-left: 30px;">
                       </div>
                       <hr />
                     </li>
@@ -518,6 +564,7 @@
                         </svg>
                       </div>
                       <div class="timeline-end mb-10">
+                        <img src="milner.jpg" class="d-block w-500" style="margin-top: -210px; width: 200px; margin-bottom: 45px;;">
                         <time class="font-mono italic">2022 - 2024 </time>
                         <div class="text-lg font-black"> North-West University</div>
                         Currently in my final year of study, pursuing a Bachelor Of Science (BSc) degree in Information Technology.
@@ -526,33 +573,34 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-6 second">
+            <div class="col-lg-6 second" style="margin-top: -16px;">
                 <br>
                 <h1>Work Experience</h1>
                 <div class="flex w-52 flex-col gap-4">
                     <div class="flex items-center gap-4">
                       <img src="north.png" class="skeleton h-20 w-20 shrink-0 rounded-full" alt=""/>
                       <div class="flex flex-col gap-4">
-                        <div class="skeleton h-4 w-20"></div>
-                        <div class="skeleton h-4 w-28"></div>
+                       <STRONG> <h2>IT STUDENT ASSISTANT</h2>
+                        <h2> NWU: 2024 </h2></STRONG>
                       </div>
                     </div>
-                    <div class="skeleton h-32 w-full"></div>
+                    <H2>Assisted with grading assignments and provided feedback to students on their progress</H2>
                 </div>
-                <div class="col-lg-6 cert mt-8">
-                    <h1 class="text-2xl font-bold">Certifications</h1>
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="col-lg-12 cert mt-5">
+                    <h1 class="text-2xl" style="margin-left: -20px;">Certifications</h1>
+                    <div class="certifications-images" style="margin-left: -20px;">
+                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="website.png" class="d-block w-100" alt="...">
-                          </div>
+                          <a href="website.png" class="carousel-item active">
+                            <img src="website.png" class="d-block w-200" alt="...">
+                          </a>
                         </div>
-                    </div>
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                      </div>
+                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="wordpress.png" class="d-block w-100" alt="...">
-                          </div>
+                          <a href="wordpress.png" class="carousel-item active">
+                            <img src="wordpress.png" class="d-block w-200" alt="...">
+                          </a>
                         </div>
                     </div>
                 </div>
@@ -564,47 +612,96 @@
 <!-- Skills Section -->
 <section id="skills" class="skills-section bg-black">
     <div class="container">
-        <h2 class="section-title text-center">SKILLS</h2>
-        <div class="container my-5">
-            <div class="row">
-                <div class="col-lg-4">
-                    <h3>Technical Skills</h3>
-                    <ul>
-                        <li>HTML, CSS, JavaScript</li>
-                        <li>Python, Django Framework</li>
-                        <li>React, Angular</li>
-                    </ul>
+      <h2 class="section-title text-center">SKILLS</h2>
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-lg-4">
+            <h3>Technical Skills</h3>
+            <ul>
+              <li>Web Development</li>
+              <li>Database Management (Oracle, MySQL)</li>
+              <li>Computer Networks</li>
+              <li>Operating Systems (Windows, Linux)</li>
+              <li>Data Analysis (Excel)</li>
+              <li>Cloud Computing (AWS)</li>
+              <div class="avatar-group -space-x-6 rtl:space-x-reverse mt-4">
+                <div class="avatar">
+                  <div class="w-12">
+                    <img src="python.png" />
+                  </div>
                 </div>
-                <div class="col-lg-4">
-                    <h3>Soft Skills</h3>
-                    <ul>
-                        <li>Communication</li>
-                        <li>Problem-solving</li>
-                        <li>Teamwork</li>
-                    </ul>
+                <div class="avatar">
+                  <div class="w-12">
+                    <img src="aws.png" />
+                  </div>
                 </div>
-                <div class="col-lg-4">
-                    <h3>Programming Languages</h3>
-                    <div class="progress my-2">
-                        <div class="progress-bar bg-success progress-bar-html" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 90%;">HTML (90%)</div>
-                    </div>
-                    <div class="progress my-2">
-                        <div class="progress-bar bg-info progress-bar-css" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 85%;">CSS (85%)</div>
-                    </div>
-                    <div class="progress my-2">
-                        <div class="progress-bar bg-warning progress-bar-js" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 80%;">JavaScript (80%)</div>
-                    </div>
-                    <div class="progress my-2">
-                        <div class="progress-bar bg-danger progress-bar-python" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 75%;">Python (75%)</div>
-                    </div>
-                    <div class="progress my-2">
-                        <div class="progress-bar bg-primary progress-bar-django" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 70%;">Django (70%)</div>
-                    </div>
+                <div class="avatar">
+                  <div class="w-12">
+                    <img src="excel.png" />
+                  </div>
                 </div>
+                <div class="avatar">
+                  <div class="w-12">
+                    <img src="oracle.png" />
+                  </div>
+                </div>
+                <div class="avatar placeholder">
+                  <div class="bg-neutral text-neutral-content w-12" style="color: white; background-color: black;">
+                    <span>+10</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-lg-4">
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Communication</li>
+              <li>Problem-solving</li>
+              <li>Teamwork</li>
+              <li>Adaptability</li>
+              <li>Critical Thinking</li>
+              <li>Attention to Detail</li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h3>Programming Languages</h3>
+            <div class="progress my-2">
+              <div class="progress-bar progress-bar-html" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 90%;">HTML (90%)</div>
             </div>
+            <div class="progress my-2">
+              <div class="progress-bar progress-bar-css" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 85%;">CSS (85%)</div>
+            </div>
+            <div class="progress my-2">
+              <div class="progress-bar progress-bar-js" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 80%;">JavaScript (80%)</div>
+            </div>
+            <div class="progress my-2">
+              <div class="progress-bar progress-bar-php" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 42%;">PHP (42%)</div>
+            </div>
+            <div class="progress my-2">
+              <div class="progress-bar progress-bar-python" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 75%;">Python (75%)</div>
+            </div>
+            <div class="progress my-2">
+              <div class="progress-bar progress-bar-cpp" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 65%;">C++ (65%)</div>
+            </div>
+            <div class="progress my-2">
+              <div class="progress-bar progress-bar-java" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 70%;">Java (70%)</div>
+            </div>
+            <div class="progress my-2">
+              <div class="progress-bar progress-bar-csharp" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="--progress-end: 85%;">C# .NET (85%)</div>
+            </div>
+          </div>
         </div>
+        <div class="col-lg-4" style="margin-left: 90px;">
+            <h3>Hobbies & Interests</h3>
+            <ul>
+              <li>AWS Cloud & Web Development</li>
+              <li>Gyming / BodyBuilding</li>
+              <li>Gaming, Socialising &  Anime </li>
+            </ul>
+          </div>
+      </div>
     </div>
-</section>
+  </section>
 
 <!-- Projects Section -->
 <section id="projects" class="projects-section bg-black">
