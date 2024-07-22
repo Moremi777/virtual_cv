@@ -99,20 +99,20 @@
             .intro-section {
                 margin-top: 50px;
                 margin-left: 50px;
-                flex-direction: row-reverse; /* Image on the right for larger screens */
+                flex-direction: row-reverse; 
             }
 
             .about-section .row {
-                flex-direction: row; /* Image on the left for larger screens */
+                flex-direction: row; 
             }
 
             .about-section .col-md-4 {
-                text-align: left; /* Center align image column on larger screens */
+                text-align: left; 
             }
 
             .image-section img {
                 max-width: 50%;
-                width: auto; /* Ensure image does not stretch on larger screens */
+                width: auto; 
                 margin-top: -90px;
                 margin-left: 20%;
             }
@@ -125,11 +125,11 @@
             
             .container-fluid .row img {
                 max-width: 100%;
-                height: auto;/* Ensure image does not stretch on larger screens */
+                height: auto;
             }
 
             .second {
-                padding-left: 130px; /* Adjust this value to shift the section */
+                padding-left: 130px; 
              }
 
         }
@@ -429,16 +429,28 @@
             display: flex;
             gap: 10px;
         }
+
         .certifications-images img{
            width: 500px;
         }
+        
         .certifications-images .carousel {
             flex: 1;
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px; /* Adjust spacing between cards */
+        }
+        
+        .card {
+            flex: 1 1 300px; /* Adjust the width of the cards */
+            margin: 0; /* Remove default margin */
         }
     </style>
 </head>
 <body>
-
     <nav class="navbar bg-black border-bottom border-body navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand">MOREMI</a>
@@ -624,7 +636,7 @@
               <li>Operating Systems (Windows, Linux)</li>
               <li>Data Analysis (Excel)</li>
               <li>Cloud Computing (AWS)</li>
-              <div class="avatar-group -space-x-6 rtl:space-x-reverse mt-4">
+          <div class="avatar-group -space-x-6 rtl:space-x-reverse mt-4">
                 <div class="avatar">
                   <div class="w-12">
                     <img src="python.png" />
@@ -691,7 +703,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4" style="margin-left: 90px;">
+       <div class="col-lg-4" style="margin-left: 90px;">
             <h3>Hobbies & Interests</h3>
             <ul>
               <li>AWS Cloud & Web Development</li>
@@ -703,38 +715,106 @@
     </div>
   </section>
 
+
 <!-- Projects Section -->
 <section id="projects" class="projects-section bg-black">
     <div class="container">
         <h2 class="section-title text-center">PROJECTS</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="project-item">
-                    <h3>Project 1</h3>
-                    <p>Description of Project 1</p>
+        <div class="card-container flex flex-wrap gap-4">
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                <figure>
+                    <video autoplay  loopmuted controls playsinline>
+                        <source src="flappybird.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Flappy Bird Game</h2>
+                    <p>This is the game I developed using Unity 3D and C# in Visual Studio. </p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Watch Video</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="project-item">
-                    <h3>Project 2</h3>
-                    <p>Description of Project 2</p>
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                <figure>
+                    <video autoplay loop muted controls playsinline>
+                        <source src="messagingapp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Project 2</h2>
+                    <p>Description of project 2.</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Watch Video</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="project-item">
-                    <h3>Project 3</h3>
-                    <p>Description of Project 2</p>
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                <figure>
+                    <video autoplay loop muted controls playsinline>
+                        <source src="petpals.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Project 3</h2>
+                    <p>Description of project 3.</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Watch Video</button>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="project-item">
-                    <h3>Project 3</h3>
-                    <p>Description of Project 2</p>
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                <figure>
+                    <video autoplay loop muted controls playsinline>
+                        <source src="encryption.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Project 4</h2>
+                    <p>Description of project 4.</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Watch Video</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                <figure>
+                    <video autoplay loop muted controls playsinline>
+                        <source src="surgeads.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Project 4</h2>
+                    <p>Description of project 4.</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Watch Video</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                <figure>
+                    <video autoplay loop muted controls playsinline>
+                        <source src="cleanblog.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Project 4</h2>
+                    <p>Description of project 4.</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Watch Video</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section bg-black text-white">
