@@ -142,6 +142,25 @@
                 padding-left: 130px; 
              }
 
+             .d-flex {
+                flex-direction: row;
+                align-items: left;
+                text-align: left;
+            }
+
+            .werk h1{
+                margin-top: -30px;
+            }
+
+        }
+
+        .werk h1{
+            margin-left: -70px;
+            padding: 20px;
+        }
+
+        .work{
+            margin-left: -50px;
         }
 
         .navbar-brand {
@@ -222,10 +241,21 @@
             text-decoration: none;
             font-family: monospace;
         }
-
         
         .about-section {
             padding: 4rem 0;
+        }
+
+        .name-container {
+            display: flex;
+            align-items: center; /* Vertically center the image and text */
+        }
+        .name-container img {
+            margin-right: 2px; /* Space between the image and the text */
+            vertical-align: middle; /* Align image vertically with the text */
+        }
+        .name-container p {
+            margin: 0; /* Remove default margin of the paragraph */
         }
 
         .section-title {
@@ -535,14 +565,36 @@
             <div class="col-lg-6">
                 <div class="about-text">
                     <h2 class="section-title">ABOUT ME</h2>
-                    <p><strong>Name:</strong> Olebogeng Moremi</p>
-                    <p><strong>Date Of Birth:</strong> 09 May 2003 </p>
-                    <p><strong>Address:</strong> X624 Moabi Street, Jouberton, North West, South Africa</p>
-                    <p><strong>Postal Code:</strong> 2574 </p>
-                    <p><strong>Email:</strong> olebogengmoremi84@gmail.com </p>
-                    <p><strong>Phone:</strong> (+27) 067 864 0387 </p>
-                    <p><strong>Field:</strong> Information Technology </p>
-                    <p><strong>Projects Worked On:</strong> <span id="project-count">0</span></p>
+                    <div class="name-container">
+                        <img src="name.png" alt="name"/>
+                        <p><strong>Name:</strong> Olebogeng Moremi</p>
+                    </div>
+                    <div class="name-container">
+                        <img src="birth.png" alt="name"/>
+                        <p><strong>Date Of Birth:</strong> 09 May 2003 </p>
+                    </div>
+                    <div class="name-container">
+                        <img src="address.png" alt="name"/>
+                        <p><strong>Address:</strong> X624 Moabi Street, Jouberton, Klerksdorp, North West, South Africa </p>
+                    </div>
+                    <p style="margin-left: 35px;"><strong>Postal Code:</strong> 2574 </p>
+                    <div class="name-container">
+                        <img src="email.png" alt="name"/>
+                        <p><strong>Email:</strong> olebogengmoremi84@gmail.com </p>
+                    </div>
+                    <div class="name-container">
+                        <img src="phone.png" alt="name"/>
+                        <p><strong>Phone:</strong> (+27) 067 864 0387 </p>
+                    </div>
+                    <div class="name-container">
+                        <img src="work.png" alt="name"/>
+                        <p><strong>Field:</strong> Information Technology </p>
+                    </div>
+                    <div class="name-container">
+                        <img src="project.png" alt="name"/>
+                        <p><strong>Projects Worked On:</strong> <span id="project-count">0</span></p>
+                    </div>
+                    
                     <div class="buttons">
                         <a href="OLEBOGENG_MOREMI_RESUME.pdf" class="btn-resume">Download CV</a>
                     </div>
@@ -557,107 +609,87 @@
     <div class="container">
         <h2 class="section-title text-center">RESUME</h2>
         <div class="row">
-            <div class="col-lg-6">
+            <!-- Education Section -->
+            <div class="col-lg-6 mb-5">
                 <h1>Education</h1>
-
-                <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-                    <li>
-                      <div class="timeline-middle">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          class="h-5 w-5">
-                          <path
-                            fill-rule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                            clip-rule="evenodd" />
-                        </svg>
-                      </div>
-                      <div class="timeline-start mb-10 md:text-end">
-                        <time class="font-mono italic">2018 - 2021</time>
-                        <div class="text-lg font-black"> Milner High School </div>
-                        <p>  Bachelors Pass, National Senior Certificate.
-
-                        Subjects did:
-                        English HL             Afrikaans FAL
-                        Pure Maths             Physics
-                        CAT                    Business Studies</p>
-                        <img src="nwu.png" class="d-block w-56" style="position: absolute; margin-top: 100px; margin-left: 30px;">
-                      </div>
-                      <hr />
-                    </li>
-                    <li>
-                      <hr />
-                      <div class="timeline-middle">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          class="h-5 w-5">
-                          <path
-                            fill-rule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                            clip-rule="evenodd" />
-                        </svg>
-                      </div>
-                      <div class="timeline-end mb-10">
-                        <img src="milner.jpg" class="d-block w-500" style="margin-top: -210px; width: 200px; margin-bottom: 45px;;">
-                        <time class="font-mono italic">2022 - 2024 </time>
-                        <div class="text-lg font-black"> North-West University</div>
-                        Currently in my final year of study, pursuing a Bachelor Of Science (BSc) degree in Information Technology.
-                      </div>
-                      <hr />
-                    </li>
-                </ul>
-                <div class="col-lg-12 cert mt-9">
-                    <h1 class="text-2xl" style="margin-left: -20px;">Certifications</h1>
-                    <div class="certifications-images" style="margin-left: -20px;">
-                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <a href="website.png" class="carousel-item active">
-                            <img src="website.png" class="d-block w-205" alt="...">
-                          </a>
+                <div class="col-lg-6 mb-5 werk">
+                    <div class="d-flex flex-column gap-4 work">
+                        <div class="d-flex align-items-center gap-4">
+                            <img src="milner.jpg" alt=""/>
                         </div>
-                      </div>
-                      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <a href="wordpress.png" class="carousel-item active">
-                            <img src="wordpress.png" class="d-block w-200" alt="...">
-                          </a>
+                        <div class="d-flex flex-column">
+                            <h2 class="font-weight-bold">IT STUDENT ASSISTANT</h2>
+                            <h2>NWU: 2024</h2>
                         </div>
+                        <p>Assisted with grading assignments and provided feedback to students on their progress.</p>
+                    </div>
+                    <div class="d-flex flex-column gap-4 mt-5 work">
+                        <div class="d-flex align-items-center gap-4">
+                            <img src="nwu.png" alt=""/>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h2 class="font-weight-bold">VIRTUAL INTERN</h2>
+                            <h2>INTERNCAREERS: 2024</h2>
+                        </div>
+                        <p>Currently busy with my 4-week AWS Cloud Internship programme with InternCareers. Check out my LinkedIn profile for more details.</p>
                     </div>
                 </div>
             </div>
-            <a href="" class="certificates" style="color: orangered;"> View more... </a>
-            </div>
-
-            <div class="col-lg-6 second" style="margin-top: -16px;">
-                <br>
+            <!-- Work Experience Section -->
+            <div class="col-lg-6 mb-5 werk">
                 <h1>Work Experience</h1>
-                <div class="flex w-52 flex-col gap-4">
-                    <div class="flex items-center gap-4">
-                      <img src="north.png" class="skeleton h-20 w-20 shrink-0 rounded-full" alt=""/>
-                      <div class="flex flex-col gap-4">
-                       <STRONG> <h2>IT STUDENT ASSISTANT</h2>
-                        <h2> NWU: 2024 </h2></STRONG>
-                      </div>
+                <div class="d-flex flex-column gap-4 work">
+                    <div class="d-flex align-items-center gap-4">
+                        <img src="north.png" class="skeleton h-20 w-20 rounded-circle" alt=""/>
+                        <div class="d-flex flex-column">
+                            <h2 class="font-weight-bold">IT STUDENT ASSISTANT</h2>
+                            <h2>NWU: 2024</h2>
+                        </div>
                     </div>
-                    <H2>Assisted with grading assignments and provided feedback to students on their progress</H2>
+                    <p>Assisted with grading assignments and provided feedback to students on their progress.</p>
                 </div>
-                <div class="flex w-52 flex-col gap-4 mt-5">
-                    <div class="flex items-center gap-4">
-                      <img src="intern.jpg" class="skeleton h-20 w-20 shrink-0 rounded-full" alt=""/>
-                      <div class="flex flex-col gap-4">
-                       <STRONG> <h2>VIRTUAL INTERN</h2>
-                        <h2> INTERNCAREERS: 2024 </h2></STRONG>
-                      </div>
+                <div class="d-flex flex-column gap-4 mt-5 work">
+                    <div class="d-flex align-items-center gap-4">
+                        <img src="intern.jpg" class="skeleton h-20 w-20 rounded-circle" alt=""/>
+                        <div class="d-flex flex-column">
+                            <h2 class="font-weight-bold">VIRTUAL INTERN</h2>
+                            <h2>INTERNCAREERS: 2024</h2>
+                        </div>
                     </div>
-                    <H2>Assisted with grading assignments and provided feedback to students on their progress</H2>
+                    <p>Currently busy with my 4-week AWS Cloud Internship programme with InternCareers. Check out my LinkedIn profile for more details.</p>
                 </div>
+            </div>
+        </div>
+        <!-- Certifications Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-2xl">Certifications</h1>
+                <div class="certifications-images">
+                    <div id="carouselExampleSlidesOnly1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="website.png">
+                                    <img src="website.png" class="d-block w-100" alt="...">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="carouselExampleSlidesOnly2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="wordpress.png">
+                                    <img src="wordpress.png" class="d-block w-100" alt="...">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="certificates text-decoration-none text-danger mt-2 d-block">View more...</a>
+            </div>
         </div>
     </div>
 </section>
+
 
 <!-- Skills Section -->
 <section id="skills" class="skills-section bg-black">
