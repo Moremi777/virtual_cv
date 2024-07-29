@@ -122,10 +122,15 @@
                 margin-left: 20%;
             }
 
+            .home h1 {
+                margin-left: -1000px;
+                text-align: left; /* Align text to the left for larger screens */
+            }
+
             h3, h5 {
                 color: orangered;
                 font-family: monospace;
-                font-size: 42px;
+                font-size: 48px;
             }
             
             .container-fluid .row img {
@@ -288,7 +293,7 @@
 
         .home h1{
             color: white;
-            margin-left: 100px;
+            text-align: center;
             margin-top: 40px;
             font-size: 40px;
         }
@@ -463,8 +468,10 @@
             color: blue;
         }
 
-        .card {
-            
+        h6 {
+            font-size: 8px;
+            text-align: center;
+            padding: 5px;
         }
 
     </style>
@@ -501,7 +508,7 @@
         </div>        
     </nav>
     <div class="home">
-        <h1> PORTFOLIO </h1>
+        <h1 class="text-center lg:ml-[100px]"> PORTFOLIO </h1>
     </div>
     <div class="intro-section">
         <div class="image-section">
@@ -966,8 +973,8 @@
     </script>
     <script>
         const texts = [
-            "<h3>Greetings!</h3><br>I'm <h5>Olebogeng Moremi.</h5><br><h4>A Full-Stack Developer</h4><br>",
-            "I'm a <h5>Full-Stack <br> Developer</h5> <br>Based in South Africa <br>"
+            "<h3>Greetings!</h3><br>My Name Is <h5>Olebogeng Moremi.</h5><br>",
+            "I'm an Aspiring <br><br> <h5>Full-Stack <br> Developer & </h5> <h5>Cloud Engineer. </h5><br>"
         ];
         let count = 0;
         let index = 0;
