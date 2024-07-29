@@ -504,6 +504,36 @@
             padding: 5px;
         }
 
+        /* ABOUT SECTION */
+        #contact {
+            background-image: url('alexander-andrews-vGCErDhrc3E-unsplash.jpg'); /* Replace with the path to your image */
+            background-size: cover; /* Cover the entire section */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            padding: 60px 0; /* Add padding as needed */
+        }
+
+        .contact-section .container {
+            position: relative;
+            z-index: 2; /* Ensure content is above the background image */
+        }
+
+        .contact-section h2 {
+            color: #fff; /* Ensure text is readable on the background */
+        }
+
+        .contact-section .form-control {
+            background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to form fields for better readability */
+            border: 1px solid #fff;
+            color: white /* Optional: change border color to white */
+        }
+
+        .btn-warning {
+            background-color: #ffc107; /* Adjust button color if needed */
+            border: none; /* Remove border for a cleaner look */
+        }
+
+
     </style>
 </head>
 <body>
@@ -881,7 +911,7 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="contact-section bg-black text-white">
+<section id="contact" class="contact-section text-white">
     <div class="container">
         <h2 class="section-title text-center">CONTACT ME</h2>
         <div class="row justify-content-center">
@@ -905,6 +935,7 @@
         </div>
     </div>
 </section>
+
 
 
 <!-- Footer -->
