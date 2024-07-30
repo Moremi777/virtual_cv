@@ -93,6 +93,11 @@
         }
 
         @media (min-width: 768px) {
+
+            p {
+                font-size: 18px;
+            } 
+
             .intro-section, .about-section {
                 flex-direction: row;
             }
@@ -152,6 +157,18 @@
                 margin-top: -30px;
             }
 
+            .about-section .name-container p {
+                font-size: 18px;
+            }
+
+        }
+
+        .edu {
+            margin-top: -9px;
+        }
+
+        .edu h1{
+            margin-left: -85px;
         }
 
         .werk h1{
@@ -160,7 +177,7 @@
         }
 
         .work{
-            margin-left: -50px;
+            margin-left: -100px;
         }
 
         .navbar-brand {
@@ -256,6 +273,7 @@
         }
         .name-container p {
             margin: 0; /* Remove default margin of the paragraph */
+            font-size: 14px;
         }
 
         .section-title {
@@ -314,6 +332,11 @@
             margin-bottom: 3rem;
             font-size: 2.5rem;
             font-weight: 600;
+        }
+
+        .btn .btn-warning {
+            background-color: orangered;
+            color: black;
         }
 
         .contact-info p {
@@ -533,6 +556,17 @@
             border: none; /* Remove border for a cleaner look */
         }
 
+        .btn-orangered {
+            background-color: orangered; /* Custom background color */
+            border-color: orangered; /* Custom border color */
+            color: black; /* Text color */
+        }
+
+        /* Optional: Add hover effect */
+        .btn-orangered:hover {
+            background-color: darkorange; /* Darker shade for hover effect */
+            border-color: darkorange; /* Darker border for hover effect */
+        }
 
     </style>
 </head>
@@ -607,7 +641,9 @@
                         <img src="address.png" alt="name"/>
                         <p><strong>Address:</strong> X624 Moabi Street, Jouberton, Klerksdorp, North West, South Africa </p>
                     </div>
-                    <p style="margin-left: 35px;"><strong>Postal Code:</strong> 2574 </p>
+                    <div class="name-container">
+                        <p style="margin-left: 35px;"><strong>Postal Code:</strong> 2574 </p>
+                    </div>
                     <div class="name-container">
                         <img src="email.png" alt="name"/>
                         <p><strong>Email:</strong> olebogengmoremi84@gmail.com </p>
@@ -640,16 +676,16 @@
         <h2 class="section-title text-center">RESUME</h2>
         <div class="row">
             <!-- Education Section -->
-            <div class="col-lg-6 mb-5">
+            <div class="col-lg-8 edu">
                 <h1>Education</h1>
                 <div class="col-lg-6 mb-5 werk">
                     <div class="d-flex flex-column gap-4 work">
-                        <div class="d-flex align-items-center gap-4">
-                            <img src="milner.jpg" alt=""/>
+                        <div class="d-flex align-items-left gap-4">
+                            <img src="milner.jpg" class="skeleton h-50 w-50 fa-square" alt=""/>
                         </div>
                         <div class="d-flex flex-column">
                             <h2 class="font-weight-bold">Milner High School</h2>
-                            <h2>National Senior Certificate: 2018 - 2021 </h2>
+                            <h2>National Senior Certificate (NSC): 2018 - 2021 </h2>
                         </div>
                         <p> 
                             <ul>
@@ -659,9 +695,9 @@
                             </ul>
                         </p>
                     </div>
-                    <div class="d-flex flex-column gap-4 mt-5 work">
+                    <div class="d-flex flex-column gap-2 mt-5 work">
                         <div class="d-flex align-items-center gap-4">
-                            <img src="nwu.png" alt=""/>
+                            <img src="nwu.png" class="skeleton h-50 w-50 fa-square" alt=""/>
                         </div>
                         <div class="d-flex flex-column">
                             <h2 class="font-weight-bold">North-West University</h2>
@@ -670,7 +706,7 @@
                         <p> 
                             <ul>
                                 <li> Pursuing a Bachelor Of Science (BSc) Degree in Information Technology. </li>
-                                <li> Currently in the final year with expected graduation in 2025. </li>
+                                <li> Currently in my final year with expected graduation in 2025. </li>
                                 <li> Core modules for the final year include: Artificial Intelligence, Computer Networks, Decision Support Systems I, Decision Support Systems II, Databases, Advanced Databases, Operating Systems, & IT Development. </li>
                             </ul>
                         </p>
@@ -678,7 +714,7 @@
                 </div>
             </div>
             <!-- Work Experience Section -->
-            <div class="col-lg-6 mb-5 werk">
+            <div class="col-lg-4 mb-5 werk">
                 <h1>Work Experience</h1>
                 <div class="d-flex flex-column gap-4 work">
                     <div class="d-flex align-items-center gap-4">
@@ -706,41 +742,40 @@
                             <h2>INTERNCAREERS: 2024(Ongoing)</h2>
                         </div>
                     </div>
-                    <p>
-                        <ul>
-                            <li> Engaging in a 4-week virtual internship focused on AWS Cloud.</li>
-                            <li> Completing various tasks to develop practical cloud computing skills. </li>
-                            <li> Will receive a Certificate of Completion upon successful completion of the internship. Check my LinkedIn profile for more updates :-) </li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- Certifications Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="text-2xl">Certifications</h1>
-                <div class="certifications-images">
-                    <div id="carouselExampleSlidesOnly1" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <a href="website.png">
-                                    <img src="website.png" class="d-block w-100" alt="...">
-                                </a>
+                    <ol>
+                        <li> Engaging in a 4-week virtual internship focused on AWS Cloud.</li>
+                        <li> Completing various tasks to develop practical cloud computing skills. </li>
+                        <li> Will receive a Certificate of Completion upon successful completion of the internship. Check my LinkedIn profile for more updates :-) </li>
+                    </ol>
+
+                            <!-- Certifications Section -->
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h1 class="text-2xl">Certifications</h1>
+                            <div class="certifications-images">
+                                <div id="carouselExampleSlidesOnly1" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <a href="website.png">
+                                                <img src="website.png" class="d-block w-100" alt="...">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="carouselExampleSlidesOnly2" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <a href="wordpress.png">
+                                                <img src="wordpress.png" class="d-block w-100" alt="...">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <a href="#" class="certificates text-decoration-none text-danger mt-2 d-block">View more...</a>
                         </div>
                     </div>
-                    <div id="carouselExampleSlidesOnly2" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <a href="wordpress.png">
-                                    <img src="wordpress.png" class="d-block w-100" alt="...">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <a href="#" class="certificates text-decoration-none text-danger mt-2 d-block">View more...</a>
             </div>
         </div>
     </div>
@@ -750,18 +785,18 @@
 <!-- Skills Section -->
 <section id="skills" class="skills-section bg-black text-white py-5">
     <div class="container mx-auto px-4">
-        <h2 class="section-title text-center text-2xl font-bold mb-4">SKILLS</h2>
+        <h2 class="section-title text-center text-4xl font-bold mb-4">SKILLS</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Technical Skills -->
             <div class="col-span-1">
                 <h3 class="text-xl font-semibold mb-2">Technical Skills</h3>
                 <ul class="list-disc list-inside mb-4">
                     <li>Web Development</li>
-                    <li>Database Management (Oracle, MySQL)</li>
+                    <li>Database Management (Oracle, MySQL) </li>
                     <li>Computer Networks</li>
-                    <li>Operating Systems (Windows, Linux)</li>
-                    <li>Data Analysis (Excel)</li>
-                    <li>Cloud Computing (AWS)</li>
+                    <li>Operating Systems (Windows, Linux) </li>
+                    <li>Data Analysis (Excel) </li>
+                    <li>Cloud Computing (AWS) </li>
                 </ul>
                 <div class="flex flex-wrap -mx-2">
                     <div class="w-1/2 sm:w-1/4 p-2">
@@ -955,7 +990,7 @@
                         <label for="message" class="form-label">Your Message</label>
                         <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-warning">Send Message</button>
+                    <button type="submit" class="btn btn-orangered">Send Message</button>
                 </form>
             </div>
         </div>
