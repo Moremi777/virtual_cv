@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olebogeng Moremi</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
@@ -623,22 +622,22 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#resume">Resume</a>
+                        <a class="nav-link" href="#resume">RESUME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#skills">SKILLS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#projects">PROJECTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -650,7 +649,7 @@
     </div>
     <div class="intro-section">
         <div class="image-section">
-            <img src="src/images/moremi.jpg" alt="Olebogeng Moremi">
+            <img src="olebogeng.png" alt="Olebogeng Moremi">
         </div>
         <div class="intro-text">
             <h2 class="typing"></h2>
@@ -955,7 +954,7 @@
             </div>
             <div class="card card-compact bg-base-100 w-100 shadow-xl">
                 <figure>
-                    <video autoplay loop muted playsinline>
+                    <video autoplay loop muted>
                         <source src="src/videos/messagingapp.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -991,7 +990,7 @@
             </div>
             <div class="card card-compact bg-base-100 w-100 shadow-xl">
                 <figure>
-                    <video autoplay loop muted playsinline>
+                    <video autoplay loop muted>
                         <source src="src/videos/encryption.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -1053,7 +1052,7 @@
         <h2 class="section-title text-center">CONTACT ME</h2>
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form action="#" method="POST" class="mx-auto">
+                <form id="contact-form" action="https://formspree.io/f/mvgpabkw" method="POST" class="mx-auto">
                     <div class="mb-3">
                         <label for="name" class="form-label">Your Name</label>
                         <input type="text" class="form-control" id="name" name="name" required>
@@ -1083,7 +1082,7 @@
     </nav>
     <nav>
       <div class="grid grid-flow-col gap-4">
-            <!-- LinkedIn -->
+            
             <a href="https://www.linkedin.com/in/olebogeng-moremi-46798a222" target="_blank" aria-label="LinkedIn">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1095,7 +1094,7 @@
                     <path d="M22.23 0h-20.46c-1.257 0-2.23.973-2.23 2.23v19.54c0 1.257.973 2.23 2.23 2.23h20.46c1.257 0 2.23-.973 2.23-2.23v-19.54c0-1.257-.973-2.23-2.23-2.23zm-14.23 20h-3v-11h3v11zm-1.5-12.6c-1.05 0-1.9-.85-1.9-1.9s.85-1.9 1.9-1.9 1.9.85 1.9 1.9-.85 1.9-1.9 1.9zm14.7 12.6h-3v-5.8c0-1.38-.03-3.16-1.9-3.16-1.9 0-2.2 1.48-2.2 3.02v5.96h-3v-11h2.9v1.5h.04c.4-.76 1.36-1.56 2.8-1.56 3 0 3.55 1.97 3.55 4.53v6.03z"></path>
                 </svg>
             </a>
-            <!-- GitHub -->
+            
             <a href="https://github.com/Moremi777" target="_blank" aria-label="GitHub">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1105,18 +1104,6 @@
                     class="fill-current"
                 >
                     <path d="M12 .297c-6.627 0-12 5.373-12 12 0 5.304 3.438 9.8 8.157 11.4.596.11.822-.26.822-.577 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.608-4.042-1.608-.545-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.73.083-.73 1.204.084 1.836 1.23 1.836 1.23 1.07 1.831 2.807 1.3 3.493.994.108-.775.418-1.3.763-1.596-2.665-.303-5.466-1.333-5.466-5.933 0-1.31.47-2.377 1.236-3.22-.124-.303-.535-1.522.117-3.167 0 0 1.012-.324 3.317 1.23.961-.267 1.991-.4 3.018-.404 1.027.004 2.057.137 3.019.404 2.306-1.553 3.316-1.23 3.316-1.23.653 1.645.242 2.864.118 3.167.766.843 1.236 1.91 1.236 3.22 0 4.619-2.815 5.629-5.485 5.924.431.37.815 1.104.815 2.221 0 1.606-.015 2.899-.015 3.29 0 .317.226.687.828.572 4.721-1.605 8.157-6.088 8.157-11.4 0-6.627-5.373-12-12-12z"></path>
-                </svg>
-            </a>
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/@" target="_blank" aria-label="Instagram">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    class="fill-current"
-                >
-                    <path d="M12 2.163c3.15 0 3.527.012 4.764.069 1.22.058 1.991.261 2.454.435.548.204 1.037.464 1.497.904.46.46.7.95.904 1.497.174.463.377 1.233.435 2.454.057 1.237.069 1.614.069 4.764s-.012 3.527-.069 4.764c-.058 1.22-.261 1.991-.435 2.454-.204.548-.464 1.037-.904 1.497-.46.46-.95.7-1.497.904-.463.174-1.233.377-2.454.435-1.237.057-1.614.069-4.764.069s-3.527-.012-4.764-.069c-1.22-.058-1.991-.261-2.454-.435-.548-.204-1.037-.464-1.497-.904-.46-.46-.7-.95-.904-1.497-.174-.463-.377-1.233-.435-2.454-.057-1.237-.069-1.614-.069-4.764s.012-3.527.069-4.764c.058-1.22.261-1.991.435-2.454.204-.548.464-1.037.904-1.497.46-.46.95-.7 1.497-.904.463-.174 1.233-.377 2.454-.435 1.237-.057 1.614-.069 4.764-.069zm0-2.163c-3.19 0-3.578.013-4.84.07-1.237.057-2.092.276-2.878.588-1.064.348-1.969.9-2.74 1.671-1.489 1.49-2.663 3.168-3.235 5.066-.395 1.467-.557 2.838-.557 5.317s.162 3.85.557 5.317c.572 1.898 1.746 3.576 3.235 5.066.77.771 1.676 1.323 2.74 1.671.786.312 1.641.531 2.878.588 1.263.057 1.65.07 4.84.07s3.578-.013 4.84-.07c1.237-.057 2.092-.276 2.878-.588 1.064-.348 1.969-.9 2.74-1.671 1.489-1.49 2.663-3.168 3.235-5.066.395-1.467.557-2.838.557-5.317s-.162-3.85-.557-5.317c-.572-1.898-1.746-3.576-3.235-5.066-.77-.771-1.676-1.323-2.74-1.671-.786-.312-1.641-.531-2.878-.588-1.262-.057-1.65-.07-4.84-.07zm0 6.61c-2.947 0-5.345 2.398-5.345 5.345s2.398 5.345 5.345 5.345 5.345-2.398 5.345-5.345-2.398-5.345-5.345-5.345zm0 8.17c-1.57 0-2.9-1.287-2.9-2.9s1.287-2.9 2.9-2.9 2.9 1.287 2.9 2.9-1.287 2.9-2.9 2.9zm3.957-8.866c-.674 0-1.275-.268-1.741-.736-.466-.466-.735-1.068-.735-1.742s.268-1.275.735-1.742c.466-.466 1.068-.735 1.741-.735.674 0 1.275.268 1.742.735.466.466.735 1.068.735 1.742s-.268 1.275-.735 1.742c-.466.466-1.068.736-1.742.736z"></path>
                 </svg>
             </a>
       </div>
@@ -1129,11 +1116,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-        <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
+
         $(document).ready(function() {
             $('.progress-bar').each(function() {
                 $(this).width($(this).attr('aria-valuenow') + '%');
@@ -1145,22 +1132,17 @@
             document.getElementById('year').textContent = year;
         }
 
-        window.onload = updateYear; // Run the function when the page loads
-    </script>    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
+        window.onload = updateYear; 
+  
         $(document).ready(function() {
             $('.progress-bar').each(function() {
                 $(this).width($(this).attr('aria-valuenow') + '%');
             });
         });
-    </script>
-    <script>
+
         const texts = [
-            "<h3>Greetings!</h3><br>My Name Is <h5>Olebogeng Moremi.</h5><br>",
-            "I'm an Aspiring <br><br> <h5>Full-Stack <br> Developer & </h5> <h5>Cloud Engineer. </h5><br>"
+            "<h3>GREETINGS!</h3><br>MY NAME IS <h5>OLEBOGENG MOREMI.</h5><br>",
+            "I'M AN ASPIRING <br><br> <h5> FULL-STACK <br> DEVELOPER & </h5> <h5> CLOUD ENGINEER. </h5><br>"
         ];
         let count = 0;
         let index = 0;
@@ -1178,16 +1160,16 @@
             if (letter.length === currentText.length) {
                 count++;
                 index = 0;
-                setTimeout(type, 3000); // wait 3 seconds before typing the next text
+                setTimeout(type, 3000); 
             } else {
-                setTimeout(type, 100); // typing speed
+                setTimeout(type, 100); 
             }
         }());
 
         document.addEventListener("DOMContentLoaded", function() {
             const countEl = document.getElementById('project-count');
-            const targetCount = 18; // The target count you want to reach
-            const duration = 7000; // Duration of the animation in milliseconds
+            const targetCount = 18; 
+            const duration = 7000; 
             const stepTime = Math.abs(Math.floor(duration / targetCount));
 
             let currentCount = 0;
