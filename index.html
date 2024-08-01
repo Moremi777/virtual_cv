@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olebogeng Moremi</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="src/images/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -19,6 +20,16 @@
             background-color: black;
             color: white;
             font-family: monospace;
+            padding-top: 60px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999; /* Ensure it stays above other content */
+            background-color: #343a40; /* Dark background to match your navbar color */
         }
 
         .bg-black {
@@ -155,6 +166,7 @@
 
             .werk h1{
                 margin-top: -30px;
+                margin-left: -90px;
             }
 
             .about-section .name-container p {
@@ -163,16 +175,25 @@
 
         }
 
+        .certifications-images a{
+            margin-left: -100px;
+        }
+
         .edu {
             margin-top: -9px;
         }
 
         .edu h1{
             margin-left: -85px;
+            font-size: 18px;
+        }
+
+        .work h2{
+            font-size: 18px;
         }
 
         .werk h1{
-            margin-left: -70px;
+            margin-left: -110px;
             padding: 20px;
         }
 
@@ -267,13 +288,16 @@
             display: flex;
             align-items: center; /* Vertically center the image and text */
         }
+
         .name-container img {
             margin-right: 2px; /* Space between the image and the text */
             vertical-align: middle; /* Align image vertically with the text */
         }
+
         .name-container p {
             margin: 0; /* Remove default margin of the paragraph */
             font-size: 14px;
+
         }
 
         .section-title {
@@ -296,11 +320,13 @@
         }
 
         .skills-section {
+            margin-top: -90px;
             background-color: white;
             padding: 4rem 0;
         }
 
         .skills-section h3{
+            padding: 12px;
             font-size: 22px;
             color: orangered;
         }
@@ -494,7 +520,11 @@
         }
 
         .certifications-images img{
-           width: 500px;
+           width: 700px;
+        }
+
+        .certifications-images {
+            margin-left: -100px;
         }
         
         .certifications-images .carousel {
@@ -517,10 +547,6 @@
             color:orangered;
         }
 
-        .certificates a:hover{
-            color: blue;
-        }
-
         h6 {
             font-size: 8px;
             text-align: center;
@@ -529,7 +555,7 @@
 
         /* ABOUT SECTION */
         #contact {
-            background-image: url('alexander-andrews-vGCErDhrc3E-unsplash.jpg'); /* Replace with the path to your image */
+            background-image: url('src/images/alexander-andrews-vGCErDhrc3E-unsplash.jpg'); /* Replace with the path to your image */
             background-size: cover; /* Cover the entire section */
             background-position: center; /* Center the image */
             background-repeat: no-repeat; /* Prevent image repetition */
@@ -566,6 +592,23 @@
         .btn-orangered:hover {
             background-color: darkorange; /* Darker shade for hover effect */
             border-color: darkorange; /* Darker border for hover effect */
+        } 
+
+        .link-cert a {
+            margin-left: 100px;
+        }
+
+        .bg-gray-200 {
+            background-color: #e5e7eb; /* Tailwind CSS gray-200 */
+        }
+
+        .github-icon {
+            margin-top: 10px;
+            align-self: flex-start;
+        }
+
+        .card-actions a:hover{
+            color: orangered;
         }
 
     </style>
@@ -573,7 +616,7 @@
 <body>
     <nav class="navbar border-bottom border-body navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand">MOREMI</a>
+            <a class="navbar-brand" style="color: orangered;">MOREMI</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -601,18 +644,19 @@
             </div>
         </div>        
     </nav>
+    
     <div class="home">
         <h1 class="text-center lg:ml-[100px]"> PORTFOLIO </h1>
     </div>
     <div class="intro-section">
         <div class="image-section">
-            <img src="moremi.jpg" alt="Olebogeng Moremi">
+            <img src="src/images/moremi.jpg" alt="Olebogeng Moremi">
         </div>
         <div class="intro-text">
             <h2 class="typing"></h2>
             <div class="buttons">
-                <a href="OLEBOGENG_MOREMI_RESUME.pdf" class="btn-resume">Resume</a>
-                <a href="mailto:olebogengmoremi84@gmail.com" class="btn-hire">Hire Me</a>
+                <a href="src/documents/OLEBOGENG_MOREMI_RESUME.pdf" class="btn-resume">Resume</a>
+                <a href="#contact" class="btn-hire">Hire Me</a>
             </div>
         </div>
     </div>
@@ -623,46 +667,46 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-img">
-                    <img src="sam-williams-EHFXVkVe0gM-unsplash.jpg" alt="Olebogeng Moremi">
+                    <img src="src/images/sam-williams-EHFXVkVe0gM-unsplash.jpg" alt="Olebogeng Moremi">
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="about-text">
                     <h2 class="section-title">ABOUT ME</h2>
                     <div class="name-container">
-                        <img src="name.png" alt="name"/>
+                        <img src="src/images/name.png" alt="name"/>
                         <p><strong>Name:</strong> Olebogeng Moremi</p>
                     </div>
                     <div class="name-container">
-                        <img src="birth.png" alt="name"/>
+                        <img src="src/images/birth.png" alt="name"/>
                         <p><strong>Date Of Birth:</strong> 09 May 2003 </p>
                     </div>
                     <div class="name-container">
-                        <img src="address.png" alt="name"/>
+                        <img src="src/images/address.png" alt="name"/>
                         <p><strong>Address:</strong> X624 Moabi Street, Jouberton, Klerksdorp, North West, South Africa </p>
                     </div>
                     <div class="name-container">
                         <p style="margin-left: 35px;"><strong>Postal Code:</strong> 2574 </p>
                     </div>
                     <div class="name-container">
-                        <img src="email.png" alt="name"/>
+                        <img src="src/images/email.png" alt="name"/>
                         <p><strong>Email:</strong> olebogengmoremi84@gmail.com </p>
                     </div>
                     <div class="name-container">
-                        <img src="phone.png" alt="name"/>
+                        <img src="src/images/phone.png" alt="name"/>
                         <p><strong>Phone:</strong> (+27) 067 864 0387 </p>
                     </div>
                     <div class="name-container">
-                        <img src="work.png" alt="name"/>
+                        <img src="src/images/work.png" alt="name"/>
                         <p><strong>Field:</strong> Information Technology </p>
                     </div>
                     <div class="name-container">
-                        <img src="project.png" alt="name"/>
+                        <img src="src/images/project.png" alt="name"/>
                         <p><strong>Projects Worked On:</strong> <span id="project-count">0</span></p>
                     </div>
                     
                     <div class="buttons">
-                        <a href="OLEBOGENG_MOREMI_RESUME.pdf" class="btn-resume">Download CV</a>
+                        <a href="src/documents/OLEBOGENG_MOREMI_RESUME.pdf" class="btn-resume">Download CV</a>
                     </div>
                 </div>
             </div>
@@ -679,35 +723,34 @@
             <div class="col-lg-8 edu">
                 <h1>Education</h1>
                 <div class="col-lg-6 mb-5 werk">
-                    <div class="d-flex flex-column gap-4 work">
+                    <div class="d-flex flex-column gap-3 work">
                         <div class="d-flex align-items-left gap-4">
-                            <img src="milner.jpg" class="skeleton h-50 w-50 fa-square" alt=""/>
+                            <img src="src/images/milner.jpg" class="skeleton h-50 w-50 fa-square" alt=""/>
                         </div>
                         <div class="d-flex flex-column">
-                            <h2 class="font-weight-bold">Milner High School</h2>
-                            <h2>National Senior Certificate (NSC): 2018 - 2021 </h2>
+                            <h2 class="font-weight-bold mt-3">Milner High School</h2>
+                            <h2>National Senior Certificate(NSC): 2018-2021 </h2>
                         </div>
                         <p> 
                             <ul>
-                                <li> Graduated with a Bachelor's Degree Pass, National Senior Certificate</li>
-                                <li> Achieved one distinction in Business Studies </li>
-                                <li> Other Subjects included: English Home Language, Afrikaans First Additional Language, Life Orientation, Mathematics, Physical Sciences, Computer Applications & Technology. </li>
+                                <li> I passed my matric with a Bachelor's Pass, earning a National Senior Certificate that qualified me for university admission. 
+                                    Excelling with a distinction in Business Studies. Demonstrated proficiency across a diverse curriculum, including English Home Language, Afrikaans First Additional Language, Life Orientation, Mathematics, Physical Sciences, and Computer Applications & Technology.</li>
                             </ul>
                         </p>
                     </div>
                     <div class="d-flex flex-column gap-2 mt-5 work">
                         <div class="d-flex align-items-center gap-4">
-                            <img src="nwu.png" class="skeleton h-50 w-50 fa-square" alt=""/>
+                            <img src="src/images/nwu.png" class="skeleton h-50 w-50 fa-square" alt=""/>
                         </div>
                         <div class="d-flex flex-column">
-                            <h2 class="font-weight-bold">North-West University</h2>
+                            <h2 class="font-weight-bold mt-6">North-West University</h2>
                             <h2> BSc Information Technology: 2022 - 2024 </h2>
                         </div>
                         <p> 
                             <ul>
-                                <li> Pursuing a Bachelor Of Science (BSc) Degree in Information Technology. </li>
-                                <li> Currently in my final year with expected graduation in 2025. </li>
-                                <li> Core modules for the final year include: Artificial Intelligence, Computer Networks, Decision Support Systems I, Decision Support Systems II, Databases, Advanced Databases, Operating Systems, & IT Development. </li>
+                                <li> Pursuing a Bachelor Of Science (BSc) Degree in Information Technology. Currently in my final year with expected graduation in 2025.
+                                    Core modules for the final year include: Artificial Intelligence, Computer Networks, Decision Support Systems I, Decision Support Systems II, Databases,
+                                    Advanced Databases, Operating Systems, & IT Development. </li>
                             </ul>
                         </p>
                     </div>
@@ -716,16 +759,16 @@
             <!-- Work Experience Section -->
             <div class="col-lg-4 mb-5 werk">
                 <h1>Work Experience</h1>
-                <div class="d-flex flex-column gap-4 work">
+                <div class="d-flex flex-column gap-3 work">
                     <div class="d-flex align-items-center gap-4">
-                        <img src="north.png" class="skeleton h-20 w-20 rounded-circle" alt=""/>
+                        <img src="src/images/north.png" class="skeleton h-20 w-20 rounded-circle" alt=""/>
                         <div class="d-flex flex-column">
                             <h2 class="font-weight-bold">IT STUDENT ASSISTANT</h2>
                             <h2>North-West University</h2>
+                            <h2>February - June 2024</h2>
                         </div>
                     </div>
                     <p>
-                        February - June 2024:
                         <ul>
                             <li> Assisted in grading assignments for the second-year IT core module, Communication Skills. </li>
                             <li> Communicated effectively with the lecturer to ensure smooth course delivery. </li>
@@ -736,7 +779,7 @@
                 </div>
                 <div class="d-flex flex-column gap-4 mt-5 work">
                     <div class="d-flex align-items-center gap-4">
-                        <img src="intern.jpg" class="skeleton h-20 w-20 rounded-circle" alt=""/>
+                        <img src="src/images/intern.jpg" class="skeleton h-20 w-20 rounded-circle" alt=""/>
                         <div class="d-flex flex-column">
                             <h2 class="font-weight-bold">AWS VIRTUAL INTERN</h2>
                             <h2>INTERNCAREERS: 2024(Ongoing)</h2>
@@ -750,14 +793,14 @@
 
                             <!-- Certifications Section -->
                     <div class="row">
-                        <div class="col-lg-8">
-                            <h1 class="text-2xl">Certifications</h1>
-                            <div class="certifications-images">
+                        <div class="col-lg-20">
+                            <h1 class="text-2xl" style="margin-left: -10px;">Certifications</h1>
+                            <div class="certifications-images" style="margin-top: -20px;">
                                 <div id="carouselExampleSlidesOnly1" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <a href="website.png">
-                                                <img src="website.png" class="d-block w-100" alt="...">
+                                            <a href="src/images/website.png">
+                                                <img src="src/images/website.png" class="skeleton h-40 w-40 square link-cert" alt="...">
                                             </a>
                                         </div>
                                     </div>
@@ -765,14 +808,14 @@
                                 <div id="carouselExampleSlidesOnly2" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <a href="wordpress.png">
-                                                <img src="wordpress.png" class="d-block w-100" alt="...">
+                                            <a href="src/images/wordpress.png">
+                                                <img src="src/images/wordpress.png" class="skeleton h-40 w-40 square" alt="...">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="certificates text-decoration-none text-danger mt-2 d-block">View more...</a>
+                            <a href="#" class="certificates text-decoration-none mt-2 d-block" style="color: orangered; margin-left: -90px;">View more...</a>
                         </div>
                     </div>
                 </div>
@@ -785,7 +828,7 @@
 <!-- Skills Section -->
 <section id="skills" class="skills-section bg-black text-white py-5">
     <div class="container mx-auto px-4">
-        <h2 class="section-title text-center text-4xl font-bold mb-4">SKILLS</h2>
+        <h2 class="section-title text-center text-4xl font-bold mb-14">SKILLS</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Technical Skills -->
             <div class="col-span-1">
@@ -799,27 +842,42 @@
                     <li>Cloud Computing (AWS) </li>
                 </ul>
                 <div class="flex flex-wrap -mx-2">
-                    <div class="w-1/2 sm:w-1/4 p-2">
-                        <img src="python.png" alt="Python" class="w-full h-auto"/>
-                    </div>
-                    <div class="w-1/2 sm:w-1/4 p-2">
-                        <img src="aws.png" alt="AWS" class="w-full h-auto"/>
-                    </div>
-                    <div class="w-1/2 sm:w-1/4 p-2">
-                        <img src="excel.png" alt="Excel" class="w-full h-auto"/>
-                    </div>
-                    <div class="w-1/2 sm:w-1/4 p-2">
-                        <img src="oracle.png" alt="Oracle" class="w-full h-auto"/>
-                    </div>
-                    <div class="w-1/2 sm:w-1/4 p-2">
-                        <div class="bg-neutral text-neutral-content w-full h-auto flex items-center justify-center" style="background-color: black; color: white;">
-                            <span>+10</span>
+                    <div class="avatar-group -space-x-6 rtl:space-x-reverse">
+                        <div class="avatar">
+                          <div class="w-12">
+                            <img src="src/images/python.png"/>
+                          </div>
                         </div>
-                    </div>
+                        <div class="avatar">
+                          <div class="w-12">
+                            <img src="src/images/oracle.png" />
+                          </div>
+                        </div>
+                        <div class="avatar">
+                          <div class="w-12">
+                            <img src="src/images/aws.png" />
+                          </div>
+                        </div>
+                        <div class="avatar">
+                          <div class="w-12">
+                            <img src="src/images/excel.png" />
+                          </div>
+                        </div>
+                        <div class="avatar">
+                          <div class="w-12">
+                            <img src="src/images/figma.png" />
+                          </div>
+                        </div>
+                        <div class="avatar placeholder">
+                          <div class="bg-neutral text-neutral-content w-12">
+                            <span>+more</span>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
             <!-- Soft Skills -->
-            <div class="col-span-1">
+            <div class="col-span-1 ml-12">
                 <h3 class="text-xl font-semibold mb-2">Soft Skills</h3>
                 <ul class="list-disc list-inside mb-4">
                     <li>Communication</li>
@@ -859,7 +917,7 @@
                 </div>
             </div>
             <!-- Hobbies & Interests -->
-            <div class="col-span-1">
+            <div class="col-span-1 mt-4">
                 <h3 class="text-xl font-semibold mb-2">Hobbies & Interests</h3>
                 <ul class="list-disc list-inside mb-4">
                     <li>AWS Cloud & Web Development</li>
@@ -879,91 +937,109 @@
         <div class="card-container flex flex-wrap gap-4">
             <div class="card card-compact bg-base-100 w-96 shadow-xl">
                 <figure>
-                    <video autoplay  loopmuted controls playsinline>
-                        <source src="flappybird.mp4" type="video/mp4">
+                    <video autoplay loop muted playsinline>
+                        <source src="src/videos/flappybird.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </figure>
-                <div class="card-body">
+                <div class="card-body bg-gray-200">
                     <h2 class="card-title">Flappy Bird Game</h2>
-                    <p>This is the game I developed using Unity 3D and C# in Visual Studio. </p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-warning">Watch Video</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-compact bg-base-100 w-96 shadow-xl">
-                <figure>
-                    <video autoplay loop muted controls playsinline>
-                        <source src="messagingapp.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Messaging App</h2>
-                    <p>This is a messsaging app my team and I developed as part of my 3rd year module, Computer Networks where we also created a simulation of a company LAN using CISCO Packet Tracer. The messaging app is hosted locally.</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-warning">Watch Video</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-compact bg-base-100 w-96 shadow-xl">
-                <figure>
-                    <video autoplay loop muted controls playsinline>
-                        <source src="petpals.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">Pet-Pals Animal Clinic System</h2>
-                    <p>This is an online system/website my team and I developed as part of a 2nd year module System Analysis & Design. The main fuctionality of the system is the booking of appointments. This is also hosted locally. </p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-warning">Watch Video</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-compact bg-base-100 w-96 shadow-xl">
-                <figure>
-                    <video autoplay loop muted controls playsinline>
-                        <source src="encryption.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title">AES Encryption Program</h2>
-                    <p>This is an encryption algorithm application with python that my team and I developed as part of our 2nd year core module, Information Security. The application has two algorithm methods, AES and a custom one which we developed too.</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-warning">Watch Video</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card card-compact bg-base-100 w-96 shadow-xl">
-                <figure>
-                    <video autoplay loop muted controls playsinline>
-                        <source src="surgeads.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </figure>
-                <div class="card-body">
-                    <h2 class="card-title"> Pet Online Store: E-Commerce </h2>
-                    <p>The project is currently under development! Stay tuned for the latest updates on the update of the ecommerce store.</p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-warning">Watch Video</button>
+                    <p>Flappy Bird is a game I developed using Unity 3D and C# in Visual Studio. This project showcases my skills in game development and programming.
+                     I utilized Unity 3D for the game engine and C# for scripting to create an engaging gameplay experience. </p>
+                    <div class="card-actions justify-between">
+                        <img src="src/images/github.png" alt="" class="github-icon">
+                        <a href="https://github.com/Moremi777/Flappy-Bird-made-with-Unity" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
+                        <button class="btn btn-orangered">Watch Video</button>
                     </div>
                 </div>
             </div>
             <div class="card card-compact bg-base-100 w-100 shadow-xl">
                 <figure>
-                    <video autoplay loop muted controls playsinline>
-                        <source src="cleanblog.mp4" type="video/mp4">
+                    <video autoplay loop muted playsinline>
+                        <source src="src/videos/messagingapp.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </figure>
-                <div class="card-body">
+                <div class="card-body bg-gray-200">
+                    <h2 class="card-title">Messaging App</h2>
+                    <p>This is a messaging app my team and I developed for our 3rd-year Computer Networks module, where we also created a company LAN simulation using CISCO Packet Tracer. 
+                    The app is hosted locally and showcases our skills in networking and software development.</p>
+                    <div class="card-actions justify-between">
+                        <img src="src/images/github.png" alt="" class="github-icon">
+                        <a href="https://github.com/nakoodatasmiyah/CMPG-315---group-8" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
+                        <button class="btn btn-orangered">Watch Video</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-compact bg-base-100 w-100 shadow-xl">
+                <figure>
+                    <video autoplay loop muted playsinline>
+                        <source src="src/videos/petpals.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+                <div class="card-body bg-gray-200">
+                    <h2 class="card-title">Pet-Pals Animal Clinic System</h2>
+                    <p>For our second-year System Analysis & Design module, my team and I developed this online system to streamline appointment booking. 
+                        It offers a user-friendly experience and is hosted locally for better performance and management.</p>
+                    <div class="card-actions justify-between">
+                        <img src="src/images/github.png" alt="" class="github-icon">
+                        <a href="https://github.com/Nyokong/New-Pet-System" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
+                        <button class="btn btn-orangered">Watch Video</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-compact bg-base-100 w-100 shadow-xl">
+                <figure>
+                    <video autoplay loop muted playsinline>
+                        <source src="src/videos/encryption.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+                <div class="card-body bg-gray-200">
+                    <h2 class="card-title">AES Encryption Program</h2>
+                    <p>As part of our second-year core module in Information Security, my team and I developed an encryption algorithm application using Python.
+                     The application incorporates two encryption methods: AES and a custom algorithm created by our team.</p>
+                    <div class="card-actions justify-between">
+                        <img src="src/images/github.png" alt="" class="github-icon">
+                        <a href="https://github.com/Moremi777/AES-Encryption-Algorithm-Program" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
+                        <button class="btn btn-orangered">Watch Video</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                <figure>
+                    <video autoplay loop muted playsinline>
+                        <source src="src/videos/surgeads.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+                <div class="card-body bg-gray-200">
+                    <h2 class="card-title"> Pet Online Store: E-Commerce </h2>
+                    <p>I’m currently working on developing the ecommerce site for a pet store. My efforts are concentrated on enhancing its features and functionality. 
+                        Stay tuned for updates on this ongoing project!</p>
+                    <div class="card-actions justify-between">
+                        <img src="src/images/github.png" alt="" class="github-icon">
+                        <a href="https://github.com/Moremi777/SurgeAds_Media" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
+                        <button class="btn btn-orangered">Watch Video</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-compact bg-base-100 w-100 shadow-xl">
+                <figure>
+                    <video autoplay loop muted playsinline>
+                        <source src="src/videos/cleanblog.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+                <div class="card-body bg-gray-200">
                     <h2 class="card-title">Media Blog Website</h2>
-                    <p> My first project when I embarked on the journey of full-stack web development. </p>
-                    <div class="card-actions justify-end">
-                        <button class="btn btn-warning">Watch Video</button>
+                    <p> The Media Blog Website was my first project in full-stack web development. It marked the beginning of my journey in building and managing web applications.
+                     This project provided essential experience in both front-end and back-end development. </p>
+                    <div class="card-actions justify-between">
+                        <img src="src/images/github.png" alt="" class="github-icon">
+                        <a href="https://github.com/Moremi777/Media-Blog" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
+                        <button class="btn btn-orangered">Watch Video</button>
                     </div>
                 </div>
             </div>
@@ -997,20 +1073,18 @@
     </div>
 </section>
 
-
-
 <!-- Footer -->
 <footer class="footer footer-center bg-base-200 text-base-content rounded p-10 bg-black">
     <nav class="grid grid-flow-col gap-4">
-      <a class="link link-hover">About Me</a>
-      <a class="link link-hover">Resume</a>
-      <a class="link link-hover">Work</a>
-      <a class="link link-hover">Projects</a>
+      <a href="#about" class="link link-hover">About Me</a>
+      <a href="#resume" class="link link-hover">Resume</a>
+      <a href="#skills" class="link link-hover">Skills</a>
+      <a href="#projects" class="link link-hover">Projects</a>
     </nav>
     <nav>
       <div class="grid grid-flow-col gap-4">
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/olebogeng-moremi-46798a222" target="_blank" aria-label="LinkedIn">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -1022,7 +1096,7 @@
                 </svg>
             </a>
             <!-- GitHub -->
-            <a href="https://github.com/your-profile" target="_blank" aria-label="GitHub">
+            <a href="https://github.com/Moremi777" target="_blank" aria-label="GitHub">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -1112,8 +1186,8 @@
 
         document.addEventListener("DOMContentLoaded", function() {
             const countEl = document.getElementById('project-count');
-            const targetCount = 16; // The target count you want to reach
-            const duration = 5000; // Duration of the animation in milliseconds
+            const targetCount = 18; // The target count you want to reach
+            const duration = 7000; // Duration of the animation in milliseconds
             const stepTime = Math.abs(Math.floor(duration / targetCount));
 
             let currentCount = 0;
