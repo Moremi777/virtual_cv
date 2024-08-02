@@ -5,6 +5,7 @@ Personal Portfolio Website Documentation
 Overview
 
 This documentation outlines the development and deployment process of my personal portfolio website. The project showcases my skills, projects, certificates, and professional information, serving as a digital resume for potential employers and industry professionals.
+
 Hosting
 
 The website is hosted on GitHub Pages, a free and straightforward service that allows you to host static websites directly from a GitHub repository. The deployment process was seamless and efficient, enabling quick updates and version control through Git.
