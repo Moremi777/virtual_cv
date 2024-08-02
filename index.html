@@ -104,6 +104,14 @@
 
         @media (min-width: 768px) {
 
+            .about-text {
+                margin-top: 90px;
+            }
+
+            .about-section .buttons a{
+                margin-left: -250px;
+            }
+
             p {
                 font-size: 18px;
             } 
@@ -172,6 +180,10 @@
                 font-size: 18px;
             }
 
+        }
+
+        .certificates {
+            margin-left: -100px; 
         }
 
         .certifications-images a{
@@ -319,7 +331,7 @@
         }
 
         .skills-section {
-            margin-top: -90px;
+            margin-top: -100px;
             background-color: white;
             padding: 4rem 0;
         }
@@ -610,6 +622,109 @@
             color: orangered;
         }
 
+        .language-name{
+            color: white;
+        }
+        .languages-container {
+            display: flex;
+            gap: 20px; /* Adjust the space between items as needed */
+            flex-wrap: wrap; /* Allow wrapping if there's not enough space */
+            color: black;
+        }
+
+        .language-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .radial-progress {
+            width: 80px; /* Adjust size as needed */
+            height: 80px;
+            border-radius: 50%;
+            background: conic-gradient(#4f46e5 var(--value), #e5e7eb var(--value));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: black; /* Text color */
+            position: relative;
+        }
+
+        .radial-progress::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            width: 60px; /* Adjust size as needed */
+            height: 60px;
+            background: #fff; /* Background color of the inner circle */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        }
+
+        .radial-progress span {
+            position: relative;
+            z-index: 2; /* Ensure the text is above everything else */
+        }
+
+        .lang {
+            margin-top: -10px;
+            margin-left: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: center; /* Center the button horizontally */
+            padding: 1rem; /* Add padding if needed */
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border: none;
+            border-radius: 0.375rem; /* Optional: for rounded corners */
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e53e3e; /* Darker shade on hover */
+        }
+
+        .github-icon {
+            margin: auto;
+            width: 1.5rem; /* Adjust size */
+            height: 1.5rem; /* Adjust size */
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                width: 100%; /* Make the card responsive on smaller screens */
+            }
+            
+            .btn {
+                font-size: 0.875rem; /* Adjust font size on smaller screens */
+            }
+        }
+
+        .about-section .buttons {
+            display: flex;
+            justify-content: center; /* Center the button container */
+            padding: 1rem; /* Add padding if needed */
+        }
+
+        .download-icon {
+            width: 2rem; /* Adjust size */
+            height: 2rem; /* Adjust size */
+        }
+
+
     </style>
 </head>
 <body>
@@ -705,7 +820,10 @@
                     </div>
                     
                     <div class="buttons">
-                        <a href="src/documents/OLEBOGENG_MOREMI_RESUME.pdf" class="btn-resume">Download CV</a>
+                        <a href="src/documents/OLEBOGENG_MOREMI_RESUME.pdf" class="btn-resume flex items-center justify-center space-x-2">
+                            <span class="font-bold">Download CV</span>
+                            <img src="icons8-download-32.png" alt="Download" class="download-icon w-4 h-4">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -764,7 +882,7 @@
                         <div class="d-flex flex-column">
                             <h2 class="font-weight-bold">IT STUDENT ASSISTANT</h2>
                             <h2>North-West University</h2>
-                            <h2>February - June 2024</h2>
+                            <h2>Feb - Jun 2024</h2>
                         </div>
                     </div>
                     <p>
@@ -790,31 +908,31 @@
                         <li> Will receive a Certificate of Completion upon successful completion of the internship. Check my LinkedIn profile for more updates :-) </li>
                     </ol>
 
-                            <!-- Certifications Section -->
+                     <!-- Certifications Section -->
                     <div class="row">
-                        <div class="col-lg-20">
-                            <h1 class="text-2xl" style="margin-left: -10px;">Certifications</h1>
-                            <div class="certifications-images" style="margin-top: -20px;">
-                                <div id="carouselExampleSlidesOnly1" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <a href="src/images/website.png">
-                                                <img src="src/images/website.png" class="skeleton h-40 w-40 square link-cert" alt="...">
-                                            </a>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-12 mx-auto">
+                            <h1 class="text-2xl certificate-heading text-center mb-1">Certifications</h1>
+                            <div class="certifications-images flex flex-col sm:flex-row sm:justify-center gap-3">
+                            <div id="carouselExampleSlidesOnly1" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="src/images/website.png">
+                                    <img src="src/images/website.png" class="skeleton h-60 w-60 square link-cert" alt="Website Certificate">
+                                    </a>
                                 </div>
-                                <div id="carouselExampleSlidesOnly2" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <a href="src/images/wordpress.png">
-                                                <img src="src/images/wordpress.png" class="skeleton h-40 w-40 square" alt="...">
-                                            </a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                            <a href="#" class="certificates text-decoration-none mt-2 d-block" style="color: orangered; margin-left: -90px;">View more...</a>
+                            <div id="carouselExampleSlidesOnly2" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="src/images/wordpress.png">
+                                    <img src="src/images/wordpress.png" class="skeleton h-60 w-60 square" alt="WordPress Certificate">
+                                    </a>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                            <a href="certificates.html" class="certificates text-decoration-none mt-2 d-block text-center" style="color: orangered;">View more...</a>
                         </div>
                     </div>
                 </div>
@@ -830,7 +948,7 @@
         <h2 class="section-title text-center text-4xl font-bold mb-14">SKILLS</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Technical Skills -->
-            <div class="col-span-1">
+            <div class="col-span-1 ml-2">
                 <h3 class="text-xl font-semibold mb-2">Technical Skills</h3>
                 <ul class="list-disc list-inside mb-4">
                     <li>Web Development</li>
@@ -876,7 +994,7 @@
                 </div>
             </div>
             <!-- Soft Skills -->
-            <div class="col-span-1 ml-12">
+            <div class="col-span-1 ml-2">
                 <h3 class="text-xl font-semibold mb-2">Soft Skills</h3>
                 <ul class="list-disc list-inside mb-4">
                     <li>Communication</li>
@@ -924,6 +1042,25 @@
                     <li>Gaming, Socialising & Anime</li>
                 </ul>
             </div>
+
+            <!-- Languages -->
+            <div class="col-span-1 mt-4 ml-10">
+                <h3 class="text-xl font-semibold mb-1 lang">Languages</h3>
+                <div class="languages-container">
+                    <div class="language-container">
+                        <p class="language-name">Setswana</p>
+                        <div class="radial-progress text-primary" style="--value:99%;" role="progressbar"><span>99%</span></div>
+                    </div>
+                    <div class="language-container">
+                        <p class="language-name">English</p>
+                        <div class="radial-progress text-primary" style="--value:95%;" role="progressbar"><span>95%</span></div>
+                    </div>
+                    <div class="language-container">
+                        <p class="language-name">Afrikaans</p>
+                        <div class="radial-progress text-primary" style="--value:68%;" role="progressbar"><span>68%</span></div>
+                    </div>
+                </div>
+            </div>                                  
         </div>
     </div>
 </section>
@@ -945,13 +1082,15 @@
                     <h2 class="card-title">Flappy Bird Game</h2>
                     <p>Flappy Bird is a game I developed using Unity 3D and C# in Visual Studio. This project showcases my skills in game development and programming.
                      I utilized Unity 3D for the game engine and C# for scripting to create an engaging gameplay experience. </p>
-                    <div class="card-actions justify-between">
-                        <img src="src/images/github.png" alt="" class="github-icon">
-                        <a href="https://github.com/Moremi777/Flappy-Bird-made-with-Unity" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
-                        <button class="btn btn-orangered">Watch Video</button>
+                    <div class="card-actions justify-center">
+                        <button class="btn btn-orangered flex items-center justify-center space-x-2">
+                            <img src="src/images/github.png" alt="GitHub" class="github-icon w-6 h-6">
+                            <a href="https://github.com/Moremi777/Flappy-Bird-made-with-Unity" class="text-black font-bold">View On GitHub</a>
+                        </button>
                     </div>
                 </div>
             </div>
+            
             <div class="card card-compact bg-base-100 w-100 shadow-xl">
                 <figure>
                     <video autoplay loop muted>
@@ -963,10 +1102,11 @@
                     <h2 class="card-title">Messaging App</h2>
                     <p>This is a messaging app my team and I developed for our 3rd-year Computer Networks module, where we also created a company LAN simulation using CISCO Packet Tracer. 
                     The app is hosted locally and showcases our skills in networking and software development.</p>
-                    <div class="card-actions justify-between">
-                        <img src="src/images/github.png" alt="" class="github-icon">
-                        <a href="https://github.com/nakoodatasmiyah/CMPG-315---group-8" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
-                        <button class="btn btn-orangered">Watch Video</button>
+                    <div class="card-actions justify-center">
+                        <button class="btn btn-orangered flex items-center justify-center space-x-2">
+                            <img src="src/images/github.png" alt="GitHub" class="github-icon w-6 h-6">
+                            <a href="https://github.com/nakoodatasmiyah/CMPG-315---group-8" class="text-black font-bold">View On GitHub</a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -981,10 +1121,11 @@
                     <h2 class="card-title">Pet-Pals Animal Clinic System</h2>
                     <p>For our second-year System Analysis & Design module, my team and I developed this online system to streamline appointment booking. 
                         It offers a user-friendly experience and is hosted locally for better performance and management.</p>
-                    <div class="card-actions justify-between">
-                        <img src="src/images/github.png" alt="" class="github-icon">
-                        <a href="https://github.com/Nyokong/New-Pet-System" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
-                        <button class="btn btn-orangered">Watch Video</button>
+                    <div class="card-actions justify-center">
+                        <button class="btn btn-orangered flex items-center justify-center space-x-2">
+                            <img src="src/images/github.png" alt="GitHub" class="github-icon w-6 h-6">
+                            <a href="https://github.com/Nyokong/New-Pet-System" class="text-black font-bold">View On GitHub</a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -999,10 +1140,11 @@
                     <h2 class="card-title">AES Encryption Program</h2>
                     <p>As part of our second-year core module in Information Security, my team and I developed an encryption algorithm application using Python.
                      The application incorporates two encryption methods: AES and a custom algorithm created by our team.</p>
-                    <div class="card-actions justify-between">
-                        <img src="src/images/github.png" alt="" class="github-icon">
-                        <a href="https://github.com/Moremi777/AES-Encryption-Algorithm-Program" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
-                        <button class="btn btn-orangered">Watch Video</button>
+                    <div class="card-actions justify-center">
+                        <button class="btn btn-orangered flex items-center justify-center space-x-2">
+                            <img src="src/images/github.png" alt="GitHub" class="github-icon w-6 h-6">
+                            <a href="https://github.com/Moremi777/AES-Encryption-Algorithm-Program" class="text-black font-bold">View On GitHub</a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1017,10 +1159,11 @@
                     <h2 class="card-title"> Pet Online Store: E-Commerce </h2>
                     <p>I’m currently working on developing the ecommerce site for a pet store. My efforts are concentrated on enhancing its features and functionality. 
                         Stay tuned for updates on this ongoing project!</p>
-                    <div class="card-actions justify-between">
-                        <img src="src/images/github.png" alt="" class="github-icon">
-                        <a href="https://github.com/Moremi777/SurgeAds_Media" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
-                        <button class="btn btn-orangered">Watch Video</button>
+                    <div class="card-actions justify-center">
+                        <button class="btn btn-orangered flex items-center justify-center space-x-2">
+                            <img src="src/images/github.png" alt="GitHub" class="github-icon w-6 h-6">
+                            <a href="https://github.com/Moremi777/SurgeAds_Media" class="text-black font-bold">View On GitHub</a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1035,10 +1178,11 @@
                     <h2 class="card-title">Media Blog Website</h2>
                     <p> The Media Blog Website was my first project in full-stack web development. It marked the beginning of my journey in building and managing web applications.
                      This project provided essential experience in both front-end and back-end development. </p>
-                    <div class="card-actions justify-between">
-                        <img src="src/images/github.png" alt="" class="github-icon">
-                        <a href="https://github.com/Moremi777/Media-Blog" style="margin-left: -90px; margin-top: 18px;"> <strong>View On GitHub</strong> </a>
-                        <button class="btn btn-orangered">Watch Video</button>
+                    <div class="card-actions justify-center">
+                        <button class="btn btn-orangered flex items-center justify-center space-x-2">
+                            <img src="src/images/github.png" alt="GitHub" class="github-icon w-6 h-6">
+                            <a href="https://github.com/Moremi777/Media-Blog" class="text-black font-bold">View On GitHub</a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1065,7 +1209,7 @@
                         <label for="message" class="form-label">Your Message</label>
                         <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-orangered">Send Message</button>
+                    <button type="submit" class="btn btn-orangered text-black font-bold">Send Message</button>
                 </form>
             </div>
         </div>
@@ -1075,7 +1219,7 @@
 <!-- Footer -->
 <footer class="footer footer-center bg-base-200 text-base-content rounded p-10 bg-black">
     <nav class="grid grid-flow-col gap-4">
-      <a href="#about" class="link link-hover">About Me</a>
+      <a href="#about" class="link link-hover">About </a>
       <a href="#resume" class="link link-hover">Resume</a>
       <a href="#skills" class="link link-hover">Skills</a>
       <a href="#projects" class="link link-hover">Projects</a>
