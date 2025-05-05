@@ -75,13 +75,13 @@
 
         .image-section img {
             width: 100%;
-            max-width: 300px;
-            border-radius: 50%;
+            max-width: 900px;
+            border-radius: 0%;
             animation: changeImage 5s infinite;
         }
 
         @keyframes changeImage {
-            0%, 50%, 100% { content: url('moremi.jpg'); }
+            0%, 50%, 100% { content: url('src/images/olebogeng.png'); }
         }
 
         .typing {
@@ -108,15 +108,19 @@
                 margin-top: 90px;
             }
 
+            .about-section img {
+                margin-left: 100px;
+            }
+
             .about-section .buttons a{
-                margin-left: -250px;
+                margin-left: -20px;
             }
 
             p {
                 font-size: 18px;
             } 
 
-            .intro-section, .about-section {
+            /*.intro-section, .about-section {
                 flex-direction: row;
             }
 
@@ -128,7 +132,47 @@
                 margin-top: 50px;
                 margin-left: 50px;
                 flex-direction: row-reverse; 
+
+            .image-section img {
+                max-width: 100%;
+                width: auto; 
+                margin-top: -60px;
+                margin-left: 0%;
             }
+            }*/
+
+            .intro-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;       /* centers items horizontally */
+                justify-content: center;   /* centers items vertically */
+                text-align: center;        /* centers text inside intro-text */
+                min-height: 100vh;         /* full screen height */
+            }
+
+            .image-section img {
+                max-width: 800px;          /* optional: resize image */
+                height: auto;
+                margin-bottom: 0px;       /* space between image and text */
+            }
+
+            .intro-text {
+                margin-top: 10px;
+            }
+
+            .buttons {
+                margin-top: 15px;
+            }
+
+            .btn-resume, .btn-hire {
+                margin: 0 10px;
+                text-decoration: none;
+                padding: 10px 15px;
+                background-color: #007BFF;
+                color: white;
+                border-radius: 5px;
+            }
+
 
             .about-section .row {
                 flex-direction: row; 
@@ -136,13 +180,6 @@
 
             .about-section .col-md-4 {
                 text-align: left; 
-            }
-
-            .image-section img {
-                max-width: 50%;
-                width: auto; 
-                margin-top: -90px;
-                margin-left: 20%;
             }
 
             .home h1 {
@@ -764,12 +801,12 @@
     </div>-->
     <div class="intro-section">
         <div class="image-section">
-            <img src="moremi.jpeg" alt="Olebogeng Moremi">
+            <img src="olebogeng.png" alt="Olebogeng Moremi">
         </div>
         <div class="intro-text">
             <h2 class="typing"></h2>
             <div class="buttons">
-                <a href="#" class="btn-resume">Resume</a>
+                <a href="src/documents/resume.pdf" class="btn-resume">Resume</a>
                 <a href="#contact" class="btn-hire">Hire Me</a>
             </div>
         </div>
@@ -813,7 +850,7 @@
                     </div>
                     
                     <div class="buttons">
-                        <a href="#" class="btn-resume flex items-center justify-center space-x-2">
+                        <a href="src/documents/resume.pdf" class="btn-resume flex items-center justify-center space-x-2">
                             <span class="font-bold">Download CV</span>
                             <img src="icons8-download-32.png" alt="Download" class="download-icon w-4 h-4">
                         </a>
