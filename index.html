@@ -1307,6 +1307,7 @@
                 </svg>
             </a>
       </div>
+      <button id="installBtn" style="display: none;">Install App</button>
     </nav>
     <aside>
         <!--<a href="src/documents/Documentation.pdf" class="link link-hover">Documentation</a>-->
@@ -1329,6 +1330,34 @@
                 .catch(err => console.error('SW failed', err));
             });
         }
+
+        let deferredPrompt;
+        const installBtn = document.getElementById('installBtn');
+
+        // Listen for the beforeinstallprompt event
+        window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault(); // Prevent the automatic prompt
+        deferredPrompt = e;
+
+        // Show the custom install button
+        installBtn.style.display = 'block';
+
+        installBtn.addEventListener('click', () => {
+            installBtn.style.display = 'none'; // Hide button after click
+            deferredPrompt.prompt();
+
+            // Wait for the user's response
+            deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the A2HS prompt');
+            } else {
+                console.log('User dismissed the A2HS prompt');
+            }
+            deferredPrompt = null;
+            });
+        });
+        });
+
     </script>
       
     
