@@ -1,0 +1,22 @@
+{
+    "name": "PORTFOLIO",
+    "short_name": "MoremiCV",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "src/images/favicon.ico",
+        "sizes": "192x192",
+        "type": "image/ico"
+      },
+      {
+        "src": "src/images/favicon.ico",
+        "sizes": "512x512",
+        "type": "image/ico"
+      }
+    ]
+  }
+  
