@@ -2,7 +2,6 @@ const CACHE_NAME = 'portfolio-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/styles.css',
   '/manifest.json',
   '/moremi.jpeg',
   '/certificates.html'
